@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/address")
+@RequestMapping("/api/addresses")
 public class AddressController {
     @Autowired
     AddressService addressService;
 
-@PostMapping("/create")
+@PostMapping("/creates")
     public AddressResponse createAddress(@RequestBody CreateAddressRequest createAddressRequest){
     return addressService.createAddress(createAddressRequest);
 }
